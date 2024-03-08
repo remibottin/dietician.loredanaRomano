@@ -1,0 +1,388 @@
+body {
+    font-family: "Montserrat", "Roboto", sans-serif;
+    background: linear-gradient(to right,
+            #D0D9D4 0%,
+            #D0D9D4 40%,
+            #F2F2F0 40%,
+            #F2F2F0 100%);
+    
+}
+/*
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;                     scroll fader aniamate
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+.reveal {
+    position: relative;
+    opacity: 0;
+  }
+  .reveal.active {
+    opacity: 1;
+  }
+  .active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+  }
+  .active.fade-left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade-bottom {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  } */ 
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #F2F2F0;
+    z-index: 10;
+
+}
+
+header .content {
+    display: flex;
+    align-items: center;
+    padding: 1.9rem;
+}
+
+header .logo {
+    flex: 1;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.logo p {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+header nav ul {
+    display: flex;
+}
+
+nav li {
+    padding-left: 3.5rem;
+    font-weight: 300;
+}
+
+nav li:hover {
+    opacity: 0.5;
+}
+
+nav a {
+    vertical-align: bottom;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #4a4a4a;
+}
+
+
+
+header .mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 760px) {
+    header .desktop {
+        
+    }
+
+ 
+}
+
+/* Open Content */
+
+.main-content {
+    position: relative;
+    top: 10rem;
+    /* To offset for fixed header. */
+}
+/* home page / section where we have the box presentation and resume */
+section {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+#first-section {
+    padding: 0 3rem 2rem 3rem;
+    border: solid 1px #798C8C;
+    background-color: #798C8C;
+    width: 250px;
+    height: 450px;
+    margin-left: 25%;
+    box-shadow: -2px 10px 20px 20px rgba(1, 1, 1, 0.2);
+}
+
+#first-section .linebox {
+    margin-top: 15px;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+}
+
+#first-section .openbox img {
+    border: solid 1px #798C8C;
+    border-radius: 100%;
+    margin-top: 15px;
+    width: 100%;
+}
+
+#first-section .openbox h2 {
+    justify-content: center;
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+#first-section .openbox p {
+    justify-content: center;
+    display: flex;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+#first-section .box-social {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#first-section .box-social img {
+    width: 40px;
+}
+
+/* Resume Section */
+.resume {
+    width: 48%;
+    float: right;
+    display: block;
+    margin-top: -200px;
+}
+.resume .resume-title h1{
+    font-size: 5rem;
+    display: flex;
+    justify-content: start;
+
+}
+.resume .resume-title p{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: start;
+
+}
+.resume .resume-p p{
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.3rem;
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+}
+.resume button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 150px;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .resume {
+        float: left;
+        display: none;
+    }
+}
+/* diplome section */
+#second-section{
+    height: 100vh;
+}
+#second-section .diplome{
+    margin-top: 300px;
+    margin-left: 5%;
+    padding-top: 12%;
+}
+
+#second-section .diplome h1{
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+#second-section .diplome li h2{
+    font-size: 1.5rem;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+}
+#second-section .diplome ul{
+    list-style: square;
+    
+}
+#second-section .diplome li{
+    margin-top: 30px;
+}
+/* cv section */
+
+#second-section .exp{
+    float: right;
+    margin-top: -200px;
+    margin-right: 10%;
+}
+
+#second-section .exp h1{
+    margin-bottom: 50px;
+    font-size: 1.8rem;
+}
+#second-section .exp li h2{
+    font-size: 1.5rem;
+    flex-direction: column;
+    margin-bottom: 15px;
+    
+}
+#second-section .exp ul{
+    list-style: square;
+    
+}
+#second-section .exp li{
+    margin-top: 30px;
+}
+
+/* about section */
+
+#third-section{
+    margin-top: 10%;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.content-box{
+    padding: 0 3rem 2rem 3rem;
+    border: solid 1px #798C8C;
+    background-color: #798C8C;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-box h1{
+    font-size: 2rem;
+    justify-content: center;
+
+    display: flex;
+}
+
+.content-box li {
+    margin-top: 15px;
+    list-style: square;
+}
+
+/* box bar */
+.content-box .box-bar1{
+    width: 150px;
+    height: 10px;
+    display: inline-flex;
+    margin: 5px;
+    padding: 5px;
+}
+.content-box .full-bar1{
+    width: 150px;
+    height: 10px;
+    background-color: #F2EFDF;
+    border: 1px solid #F2EFDF;
+    border-radius: 15px;
+}
+.content-box .box-bar2{
+    width: 150px;
+    height: 10px;
+    display: inline-flex;
+    margin: 5px;
+    padding: 5px;
+}
+.content-box .full-bar2{
+    width: 150px;
+    height: 10px;
+    background-color: #F2EFDF;
+    border: 1px solid #F2EFDF;
+    border-radius: 15px 0px 0px 15px;
+}
+.content-box .empty-bar2{
+    width: 15px;
+    height: 10px;
+    display: flex;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+}
+.content-box .box-bar3{
+    width: 150px;
+    height: 10px;
+    display: inline-flex;
+    margin: 5px;
+    padding: 5px;
+}
+.content-box .full-bar3{
+    width: 150px;
+    height: 10px;
+    background-color: #F2EFDF;
+    border: 1px solid #F2EFDF;
+    border-radius: 15px 0px 0px 15px;
+}
+.content-box .empty-bar3{
+    width: 50px;
+    height: 10px;
+    display: flex;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.content-box .imgbox{
+    float: center;
+    width: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
