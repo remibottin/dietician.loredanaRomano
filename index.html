@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
    <link rel="stylesheet" href="resources/css/index.css">
    <link rel="stylesheet" href="resources/css/reset.css">
    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,7 +15,7 @@
   <!-- Header -->
   <header>
     <div class="content">
-        <div class="desktop logo">
+        <div class="logo">
         <h1><a href="#header">Loredana Romano</a></h1>
         <p >Étudiante Diététique</p>
         </div>
@@ -24,9 +25,9 @@
             <li><a href="#">À Propos</a></li>
             <li><a href="#">Contact</li>
           </ul>
-
-
         </nav>
+        <img src="resources/icons8-menu-50.png" alt="menu-button" class="menu-button">
+        </div>
   </header>
 
       <!-- Main Content -->
@@ -185,6 +186,14 @@
   <script>
     AOS.init();
   </script>
+  <script>
+    const menuHamburger = document.querySelector(".menu-button")
+    const navLinks = document.querySelector("nav.desktop")
+
+    menuHamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('mobile-menu')
+    })
+</script>
   <!-- <script>
     function reveal() {
   var reveals = document.querySelectorAll(".reveal");
