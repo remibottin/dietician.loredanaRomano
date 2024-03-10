@@ -29,25 +29,20 @@
         <img src="resources/icons8-menu-50.png" alt="menu-button" class="menu-button">
         </div>
   </header>
-
-      <!-- Main Content -->
-    <div class="main-content">
-    
-    <!-- Open Content -->
+    <!-- First Section w/ box presentation & resume -->
         <section id="first-section">
                 <div class="openbox">   
                     <img src="resources/photos/portrait.jpg" alt="Ma Photo de présentation">
                     <div class="linebox"></div>
                     <h2 >Loredana Romano</h2>
                     <p >Étudiante en BTS Diététique</p>
+                    <div class="box-social">
+                        <a href="#"><img src="resources/photos/icons8-instagram-32.png" alt="Instagram"></a>
+                        <a href="#"><img src="resources/photos/icons8-linkedin-32.png" alt="Linkedin"></a>
+                        <a href="#"><img src="resources/photos/icons8-facebook-32 (1).png" alt="Facebook"></a>
+                    </div>
                 </div>
-                <div class="box-social">
-                    <a href="#"><img src="resources/photos/icons8-instagram-32.png" alt="Instagram"></a>
-                    <a href="#"><img src="resources/photos/icons8-linkedin-32.png" alt="Linkedin"></a>
-                    <a href="#"><img src="resources/photos/icons8-facebook-32 (1).png" alt="Facebook"></a>
-                </div>
-            </div>
-            <div class="resume">
+            <div class="resume" data-aos="fade" data-aos-duration="3000">
                 <div class="resume-title">
                     <h1>Hello</h1>
                     <p>Qui je suis et ce que je fais</p>
@@ -63,7 +58,7 @@
                     </div>
                 </div>
         </section>
-    <!-- Cv Section -->
+    <!-- Second section w/ a diplome resume and a professional resume -->
     <section id="second-section" data-aos="fade" data-aos-duration="3000" >
             <div class="diplome">
                 <h1>Diplômes et Formations</h1>
@@ -147,7 +142,7 @@
     </section>
     
     <!-- contact -->
-        <section id="#contact-section">
+        <section id="contact-section">
             <div class="contact">
                 <h1>Contact</h1>
                 <div class="contact-list">
@@ -189,6 +184,7 @@
   <script>
     const menuHamburger = document.querySelector(".menu-button")
     const navLinks = document.querySelector("nav.desktop")
+
 
     menuHamburger.addEventListener('click',()=>{
     navLinks.classList.toggle('mobile-menu')

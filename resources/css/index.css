@@ -12,7 +12,8 @@ body {
         font-family: "Montserrat", "Roboto", sans-serif;
         background: 
         #F2F2F0;
-        
+        width: 100%;
+        margin: 0;
     }
 }
     
@@ -76,9 +77,11 @@ body {
 /* Header */
 header {
     position: fixed;
+    top:0;
     width: 100%;
     background-color: #F2F2F0;
-    z-index: 3;
+    z-index: 5;
+    height: 100px;
 
 }
 
@@ -129,13 +132,65 @@ header .mobile {
     display: none;
 }
 
-@media screen and (max-height: 940px){ /* Iphone screen size */
+@media screen and (max-width: 940px){ /* Iphone screen size */
     .desktop{
         position: absolute;
         background-color: rgba(191, 183, 183, 0.369);
         backdrop-filter: blur(15px);
         width: 100%;
-        height: 190vh;
+        height: 100vh;
+        display: flex;
+        top:0;
+        left:0;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+    .desktop.mobile-menu{
+        margin-left: 0;
+        width: 100%;
+    }
+    header .content .desktop ul{
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .content .desktop ul li{
+        margin: 25px auto;
+    }
+    header .content .desktop ul li a{
+        font-size: 1.5rem;
+    }
+    header .content{
+        padding: 0;
+    }
+    header .content .logo h1{
+        font-size: 1.2rem;
+        padding-top: 1.9rem;
+        padding-left: 1.9rem;
+    }
+    header .content .logo p{
+        font-size: 0.7rem;
+        padding-left: 1.9rem;
+    }
+    .content .menu-button{
+        top: 0;
+        right: 0;
+        position: absolute;
+        display: flex;
+        padding: 1.9rem;
+    }
+
+}
+@media screen and (min-width: 940px) and (max-width:1040px){ /* Ipad Pro responsive*/
+    .desktop{
+        position: absolute;
+        background-color: rgba(191, 183, 183, 0.369);
+        backdrop-filter: blur(15px);
+        width: 100%;
+        min-height: 100vh;
         display: flex;
         top:0;
         left: 0;
@@ -146,6 +201,7 @@ header .mobile {
     }
     .desktop.mobile-menu{
         margin-left: 0;
+        
     }
     header .content .desktop ul{
         display: flex;
@@ -179,80 +235,15 @@ header .mobile {
     }
 
 }
-@media screen and (max-width: 1024px){ /* Mobile tablet screen size */
-    .desktop{
-        position: absolute;
-        background-color: rgba(191, 183, 183, 0.369);
-        backdrop-filter: blur(15px);
-        width: 100%;
-        height: 150vh;
-        display: flex;
-        top:0;
-        left: 0;
-        justify-content: center;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
-    }
-    .desktop.mobile-menu{
-        margin-left: 0;
-    }
-    header .content .desktop ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    header .content .desktop ul li{
-        margin: 25px 0;
-    }
-    header .content .desktop ul li a{
-        font-size: 2rem;
-    }
-    header .content{
-        padding: 0;
-    }
-    header .content .logo h1{
-        font-size: 1.2rem;
-        padding-top: 1.9rem;
-        padding-left: 1.9rem;
-    }
-    header .content .logo p{
-        font-size: 0.7rem;
-        padding-left: 1.9rem;
-    }
-    .content .menu-button{
-        top: 0;
-        right: 0;
-        position: absolute;
-        display: flex;
-        padding: 1.9rem;
-    }
 
-}
-
-/* Open Content */
-
-.main-content {
-    position: relative;
-    top: 10rem;
-    /* To offset for fixed header. */
-}
-/* home page / section where we have the box presentation and resume */
-section {
-    margin: 0 auto;
-    width: 100%;
-    height: 100vh;
-    
-    
-}
-
-#first-section {
+.openbox {
     padding: 0 3rem 2rem 3rem;
     border: solid 1px #798C8C;
     background-color: #798C8C;
     width: 250px;
     height: 450px;
     margin-left: 25%;
+    margin-top: 150px;
     justify-content: center;
     box-shadow: -2px 10px 20px 20px rgba(1, 1, 1, 0.2);
 }
@@ -302,7 +293,8 @@ section {
     width: 48%;
     float: right;
     display: block;
-    margin-top: -200px;
+    flex-direction: column;
+    margin-top: -400px;
 }
 .resume .resume-title h1{
     font-size: 5rem;
@@ -336,10 +328,53 @@ section {
     margin-top: 15px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px){
+@media only screen and (max-width: 940px){ /*Mobile phone responsive*/
+    .openbox{
+        margin-top: 15vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .resume {
-        float: left;
-        display: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 100%;
+    
+    }
+    .resume button{
+        display: flex;
+        margin: 10px auto;
+    }
+    .resume .resume-title h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .resume .resume-title p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .resume .resume-p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .resume .resume-p p{
+        width: 90%;
+        text-align: justify;
+    }
+}
+@media screen and (min-width:940px) and (max-width:1040px){ /*Ipad Pro responsive*/
+    .resume{
+        width:35%;
     }
 }
 /* diplome section */
@@ -394,7 +429,90 @@ section {
 #second-section .exp li{
     margin-top: 30px;
 }
-
+@media only screen and (max-width: 940px){
+    #second-section{
+        margin-top: 400px;
+    }
+    #second-section .diplome{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto ;
+    }
+    .diplome h1{
+        width: 92%;
+        margin: 0 0 0 20px;
+    }
+    .diplome ul{
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .diplome ul li{
+        list-style: none;
+    }
+    #second-section .exp{
+        display: flex;
+        margin: 0 auto ;
+        margin-top: 100px;
+        float: right;
+    }
+    #second-section .exp h1{
+        position: absolute;
+        right: 10px;
+    }
+    #second-section .exp ul{
+        list-style: none;
+        margin-top: 50px;
+        margin-right: 10px;
+    }
+    #second-section .exp ul li{
+        text-align: right;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 940px) and (max-width:1040px){ /* Ipad Pro responsive*/ 
+    #second-section{
+        margin-top: 20px;
+    }
+    #second-section .diplome{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto ;
+    }
+    .diplome h1{
+        width: 92%;
+        margin: 0 0 0 40px;
+    }
+    .diplome ul{
+        margin-left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .diplome ul li{
+        list-style: none;
+    }
+    #second-section .exp{
+        display: flex;
+        margin: 0 auto ;
+        margin-top: 0px;
+        float: right;
+    }
+    #second-section .exp h1{
+        position: absolute;
+        right: 40px;
+    }
+    #second-section .exp ul{
+        list-style: none;
+        margin-top: 60px;
+        margin-right: 40px;
+    }
+    #second-section .exp ul li{
+        text-align: right;
+        width: 100%;
+    }
+}
 /* about section */
 
 #third-section{
@@ -492,9 +610,31 @@ section {
     margin-top: 20px;
     margin-left: 30px;
 }
+@media only screen and (max-width: 940px){
+    #third-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 150px;
+    }
+    .content-box{ 
+        margin: 6px auto;
+    }
+}
+@media only screen and (min-width: 940px) and (max-width: 1040px){
+    #third-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .content-box{ 
+        margin: 6px auto;
+    }
+}
 
 #contact-section{
     height: 100vh;
+    margin-top: 300px;
 }
 
 .contact h1{
@@ -518,4 +658,26 @@ section {
 footer p{
     font-size: 0.8rem;
     padding: 15px;
+}
+@media only screen and (max-width: 940px){
+    #contact-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #contact-section h1{
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (min-width: 940px) and (max-width: 1040px){
+    #contact-section{
+        height:50vh;
+    }
+    footer p{
+        position: relative;
+        display: flex;
+        bottom: 0;
+    }
 }
