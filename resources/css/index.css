@@ -142,19 +142,21 @@ header .mobile {
         display: flex;
         top:0;
         left:0;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         margin-left: -100%;
         transition: all 0.5s ease;
     }
     .desktop.mobile-menu{
         margin-left: 0;
-        width: 100%;
+        
     }
     header .content .desktop ul{
         display: flex;
         margin: 0;
+        width: 100%;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
     }
     header .content .desktop ul li{
@@ -280,11 +282,12 @@ header .mobile {
     display:flex;
     justify-content: space-around;
     margin-top: 30px;
+    padding: 0;
 }
 
 #first-section .box-social img {
     width: 40px;
-    margin: 0;
+    margin: 0 auto;
 }
 
 
@@ -380,6 +383,7 @@ header .mobile {
 /* diplome section */
 #second-section{
     height: 100vh;
+    
 }
 #second-section .diplome{
     margin-top: 300px;
