@@ -356,6 +356,8 @@ header .mobile {
     }
     .resume button{
         display: flex;
+        text-decoration: none;
+        color: black;
         margin: 10px auto;
     }
     .resume .resume-title h1{
