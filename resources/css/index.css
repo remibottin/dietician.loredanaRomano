@@ -116,6 +116,7 @@ nav li {
 
 nav li:hover {
     opacity: 0.5;
+    transition: all 0.4s ease;
 }
 
 nav a {
@@ -243,7 +244,7 @@ header .mobile {
     border: solid 1px #798C8C;
     background-color: #798C8C;
     width: 250px;
-    height: 450px;
+    height: 400px;
     margin-left: 25%;
     margin-top: 150px;
     justify-content: center;
@@ -257,7 +258,7 @@ header .mobile {
     background-color: black;
 }
 
-#first-section .openbox img {
+#first-section .openbox .imgprofile {
     border: solid 1px #798C8C;
     border-radius: 100%;
     margin-top: 15px;
@@ -281,12 +282,13 @@ header .mobile {
 #first-section .box-social {
     display:flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 0;
 }
 
 #first-section .box-social img {
-    width: 40px;
+    width: 50px;
     margin: 0 auto;
 }
 
@@ -327,8 +329,14 @@ header .mobile {
     flex-direction: column;
     width: 150px;
     height: 30px;
+    border: 1px solid black;
     border-radius: 30px;
     margin-top: 15px;
+}
+.resume button:hover{
+    background-color: #798C8C ;
+    color: #F2F2F0;
+    transition: all 0.4s ease;
 }
 
 @media only screen and (max-width: 940px){ /*Mobile phone responsive*/
