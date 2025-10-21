@@ -78,37 +78,46 @@ header .mobile {
 }
 
 @media screen and (max-width: 940px){ /* Iphone screen size */
-    .desktop{
-        position: absolute;
-        background-color: rgba(191, 183, 183, 0.369);
-        backdrop-filter: blur(15px);
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        top:0;
-        left:0;
-        justify-content: space-around;
-        align-items: center;
-        margin-left: -100%;
-        transition: all 0.5s ease;
-    }
+  .desktop {
+    position: fixed;        /* fixe sur tout l’écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;           /* couvre tout l’écran, même sur mobile */
+    background-color: rgba(191, 183, 183, 0.6);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+    z-index: 999;           /* au-dessus de tout */
+}
     .desktop.mobile-menu{
         margin-left: 0;
-        
     }
     header .content .desktop ul{
         display: flex;
-        margin: 0;
-        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
     }
     header .content .desktop ul li{
-        margin: 25px auto;
+        width: 100%;
+        text-align: center;
+        margin: 15px 0; /* espace régulier entre les liens */
     }
     header .content .desktop ul li a{
         font-size: 1.5rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: #4a4a4a;
+        text-decoration: none;
     }
     header .content{
         padding: 0;
@@ -129,8 +138,8 @@ header .mobile {
         display: flex;
         padding: 1.9rem;
     }
-
 }
+
 @media screen and (min-width: 940px) and (max-width:1040px){ /* Ipad Pro responsive*/
     .desktop{
         position: absolute;
@@ -193,6 +202,7 @@ header .mobile {
     margin-top: 150px;
     justify-content: center;
     box-shadow: -2px 10px 20px 20px rgba(1, 1, 1, 0.2);
+    border-radius: 10px;
 }
 
 #first-section .linebox {
@@ -265,6 +275,8 @@ header .mobile {
     display: flex;
     justify-content: start;
     margin-top: 15px;
+            font-weight: bold;
+
 }
 .resume button{
     display: inline-flex;
@@ -274,8 +286,9 @@ header .mobile {
     width: 150px;
     height: 30px;
     border: 1px solid black;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-top: 15px;
+    background-color: #F2F2F0 ;
 }
 .resume button:hover{
     background-color: #798C8C ;
@@ -318,14 +331,22 @@ header .mobile {
         margin-bottom: 10px;
     }
 
-    .resume .resume-p{
+    .resume-p{
         display: flex;
-        justify-content: center;
-        align-items: center;
-       
-    }
-    .resume .resume-p p{
+        flex-direction: column;
+        margin-top: 100px; /* moins haut pour rapprocher de openbox */
+        margin-left: auto;
+        margin-right: auto;
         width: 90%;
+        max-width: 500px;
+        text-align: center;
+        align-items: center;
+    }
+    .resume-p p{
+        width: 100%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-weight: bold;
         text-align: justify;
     }
 }
@@ -389,47 +410,68 @@ header .mobile {
     margin-top: 20px;
 }
 @media only screen and (max-width: 940px){
-    #second-section{
+    #second-section {
         margin-top: 400px;
+        padding: 0 10px; /* ajout d’un padding horizontal */
     }
-    #second-section .diplome{
+
+    #second-section .diplome {
         display: flex;
+        flex-direction: column; /* pour que le texte ne soit pas compressé */
         width: 100%;
-        flex-direction: column;
-        margin: 0 auto ;
+        float: none;
+        margin-bottom: 40px; /* espace entre diplome et exp */
     }
-    .diplome h1{
-        width: 92%;
-        margin: 0 0 0 20px;
-    }
-    .diplome ul{
-        margin-left: 10px;
+
+    #second-section .diplome ul {
+        margin-left: 0;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        padding: 0;
     }
-    .diplome ul li{
+
+    #second-section .diplome ul li {
         list-style: none;
+        margin-bottom: 15px;  /* espace entre chaque item */
+        line-height: 1.8;     /* rend le texte plus aéré */
     }
-    #second-section .exp{
+
+    #second-section .exp {
         display: flex;
-        margin: 0 auto ;
-        margin-top: 100px;
-        float: right;
+        flex-direction: column;
+        width: 100%;
+        float: none;
+        margin-top: 20px;
     }
-    #second-section .exp h1{
-        position: absolute;
-        right: 10px;
+
+    #second-section .exp h1 {
+        position: relative; /* plus besoin d’absolute */
+        text-align: right; /* centré sur mobile */
+        margin-bottom: 20px;
+        
     }
-    #second-section .exp ul{
+    #second-section .diplome h1 {
+        position: relative; /* plus besoin d’absolute */
+        text-align: left; /* centré sur mobile */
+        margin-bottom: 20px;
+        
+    }
+
+    #second-section .exp ul {
         list-style: none;
-        margin-top: 50px;
-        margin-right: 10px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
-    #second-section .exp ul li{
+
+    #second-section .exp ul li {
         text-align: right;
-        width: 100%;
+        margin-bottom: 15px; /* espace entre les lignes */
+        line-height: 1.8;
     }
 }
+
 @media screen and (min-width: 940px) and (max-width:1040px){ /* Ipad Pro responsive*/ 
     #second-section{
         margin-top: 20px;
@@ -474,59 +516,89 @@ header .mobile {
 }
 /* about section */
 
-#third-section{
-    margin-top: 10%;
+#third-section {
+    margin-top: 5%;
     width: 100%;
-    display: inline-flex;
+    display: flex; /* inline-flex pas nécessaire ici */
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center; /* centre horizontalement les box */
+    align-items: center; /* centre verticalement si les hauteurs varient */
+    gap: 30px; /* espace entre les deux box */
 }
-.content-box{
+
+.content-box {
     padding: 0 3rem 2rem 3rem;
     border: solid 1px #798C8C;
     background-color: #798C8C;
     width: 400px;
     height: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center; /* centre aussi le texte */
+    border-radius: 10px; /* optionnel : rend plus doux */
 }
-.content-box h1{
+
+.content-box h1 {
     font-size: 2rem;
-    justify-content: center;
     display: flex;
+    justify-content: center;
 }
 
 .content-box li {
     margin-top: 15px;
-    list-style: square;
+    list-style: none;
 }
 
+.appli {
+    text-align: right;
+    margin-top: 100px;
+    margin-bottom: 10%;
+    margin-right: 15%;
+}
+.appli h1{
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.appli li {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.appli p {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 940px){
+    #third-section {
+    display: flex;
+    flex-direction: column; /* aligne les cadres l’un sous l’autre */
+    justify-content: center; /* centre verticalement */
+    align-items: center; /* centre horizontalement */
+    gap: 10px; /* espace entre les deux cadres */
+    margin-top: 250px;
+    width: 100%;
+    
+}
+
+/* ton style de box reste inchangé, juste ajusté pour un centrage parfait */
+.content-box { 
+    margin: 10px auto;
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* centre aussi le texte dans chaque cadre */
+    flex-direction: column;
+    text-align: center;
+}
 .appli{
     text-align: left;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-top: 100px;
+    margin-left: 10%;
 }
-.appli li{
-    margin-top: 10px;
-    list-style: square;
-}
-.appli p{
-    margin-top: 10px;
-}
-@media only screen and (max-width: 940px){
-    #third-section{
-        flex-direction: column;
-        width: 90%;
-        margin-top: 150px;
-        
-    }
-    .content-box{ 
-        margin: 10px 10px;
-        width: 100%;
-        height: 250px;
-        width: 250px;
-    }
 }
 @media only screen and (min-width: 940px) and (max-width: 1040px){
     #third-section{
@@ -562,10 +634,7 @@ header .mobile {
     align-items: center;
 }
 
-footer p{
-    font-size: 0.8rem;
-    padding: 15px;
-}
+
 @media only screen and (max-width: 940px){
     #contact-section{
         display: flex;
@@ -587,4 +656,16 @@ footer p{
         display: flex;
         bottom: 0;
     }
+}
+html {
+    scroll-behavior: smooth;
+}
+:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* Hauteur de ton header */
+    margin-top: -100px;
+}
+:target {
+    scroll-margin-top: 100px; /* adapte à la hauteur de ton header */
 }
