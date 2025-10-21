@@ -257,11 +257,11 @@ header .mobile {
     justify-content: start;
 
 }
-.resume .resume-p p{
+.resume .resume-p {
     font-size: 1rem;
     text-align: left;
     line-height: 1.3rem;
-    width: 50%;
+    width: 80%;
     display: flex;
     justify-content: start;
     margin-top: 15px;
@@ -357,10 +357,11 @@ header .mobile {
 }
 #second-section .diplome ul{
     list-style: square;
+    width: 30%;
     
 }
 #second-section .diplome li{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 /* cv section */
 
@@ -385,7 +386,7 @@ header .mobile {
     
 }
 #second-section .exp li{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 @media only screen and (max-width: 940px){
     #second-section{
@@ -484,7 +485,7 @@ header .mobile {
     padding: 0 3rem 2rem 3rem;
     border: solid 1px #798C8C;
     background-color: #798C8C;
-    width: 300px;
+    width: 400px;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -493,7 +494,6 @@ header .mobile {
 .content-box h1{
     font-size: 2rem;
     justify-content: center;
-
     display: flex;
 }
 
@@ -502,81 +502,30 @@ header .mobile {
     list-style: square;
 }
 
-/* box bar */
-.content-box .box-bar1{
-    width: 150px;
-    height: 10px;
-    display: inline-flex;
-    margin: 5px;
-    padding: 5px;
+.appli{
+    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
-.content-box .full-bar1{
-    width: 150px;
-    height: 10px;
-    background-color: #F2EFDF;
-    border: 1px solid #F2EFDF;
-    border-radius: 15px;
+.appli li{
+    margin-top: 10px;
+    list-style: square;
 }
-.content-box .box-bar2{
-    width: 150px;
-    height: 10px;
-    display: inline-flex;
-    margin: 5px;
-    padding: 5px;
-}
-.content-box .full-bar2{
-    width: 150px;
-    height: 10px;
-    background-color: #F2EFDF;
-    border: 1px solid #F2EFDF;
-    border-radius: 15px 0px 0px 15px;
-}
-.content-box .empty-bar2{
-    width: 15px;
-    height: 10px;
-    display: flex;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 0px 15px 15px 0px;
-}
-.content-box .box-bar3{
-    width: 150px;
-    height: 10px;
-    display: inline-flex;
-    margin: 5px;
-    padding: 5px;
-}
-.content-box .full-bar3{
-    width: 150px;
-    height: 10px;
-    background-color: #F2EFDF;
-    border: 1px solid #F2EFDF;
-    border-radius: 15px 0px 0px 15px;
-}
-.content-box .empty-bar3{
-    width: 50px;
-    height: 10px;
-    display: flex;
-    background-color: black;
-    border: 1px solid black;
-    border-radius: 0px 15px 15px 0px;
-}
-
-.content-box .imgbox{
-    float: center;
-    width: 50px;
-    margin-top: 20px;
-    margin-left: 30px;
+.appli p{
+    margin-top: 10px;
 }
 @media only screen and (max-width: 940px){
     #third-section{
-        display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         margin-top: 150px;
+        
     }
     .content-box{ 
-        margin: 6px auto;
+        margin: 10px 10px;
+        width: 100%;
+        height: 250px;
+        width: 250px;
     }
 }
 @media only screen and (min-width: 940px) and (max-width: 1040px){
